@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import MessageCard from "../components/MessageCard.jsx";
 import "./ScrollContent.css";
-
 import img1 from "../assets/memories/memory1.jpg";
 import img2 from "../assets/memories/memory2.jpg";
 import img3 from "../assets/memories/memory3.jpg";
