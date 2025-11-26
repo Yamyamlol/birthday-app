@@ -4,7 +4,7 @@ import { useState } from "react";
 import sanyam1 from "../assets/memories/sanyam1.png";
 import sanyam2 from "../assets/memories/sanyam2.png";
 import sanyam3 from "../assets/memories/sanyam3.png";
-import "./finalMessage.css";
+import "./FinalMessage.css";
 
 export default function FinalMessage() {
   const [otp, setOtp] = useState("");
