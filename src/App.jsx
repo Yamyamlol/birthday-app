@@ -3,7 +3,7 @@ import Landing from "./pages/Landing.jsx";
 import TreasureHunt from "./pages/TreasureHunt.jsx";
 import FinalMessage from "./pages/FinalMessage.jsx";
 import CookieModal from "./components/CookieModal.jsx";
-import ScrollContent from "./Pages/ScrollContent.jsx";
+import ScrollContent from "./pages/ScrollContent.jsx";
 
 export default function App() {
   return (
