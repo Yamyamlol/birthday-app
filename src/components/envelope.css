@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Nunito:wght@300;400;600&display=swap");
+
+:root {
+  --font-title: "Poppins", sans-serif;
+  --font-body: "Nunito", sans-serif;
+
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-lg: 20px;
+
+  --pink: #ffb6d9;
+  --pink-dark: #ff6fb1;
+  --envelope-top: #ff7ab8;
+  --envelope-body: #ff92c6;
+  --letter-shadow: rgba(255, 170, 210, 0.3);
+}
+
+.envelope-wrapper {
+  height: 380px;
+  width: 280px;
+  position: relative;
+  cursor: pointer;
+  margin-top: 40px;
+  transition: transform 0.2s ease;
+}
+
+.envelope-wrapper:hover {
+  transform: translateY(-4px);
+}
+
+#envelope {
+  position: relative;
+  width: 280px;
+  height: 180px;
+  background: var(--envelope-body);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 6px 24px rgba(255, 140, 190, 0.35);
+}
+
+.front {
+  position: absolute;
+}
+
+.flap {
+  border-left: 140px solid transparent;
+  border-right: 140px solid transparent;
+  border-bottom: 82px solid transparent;
+  border-top: 98px solid var(--envelope-top);
+  transform-origin: top;
+  z-index: 5;
+  transition: transform 0.6s ease;
+}
+
+.open .flap {
+  transform: rotateX(180deg);
+}
+
+.pocket {
+  border-left: 140px solid #ffb5d9;
+  border-right: 140px solid #ffb5d9;
+  border-bottom: 90px solid #ff9fcc;
+  border-top: 90px solid transparent;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  z-index: 4;
+}
+
+.real-letter {
+  position: absolute;
+  width: 85%;
+  height: 130%;
+  left: 50%;
+  top: -10px;
+  transform: translate(-50%, 20px) scale(0.75);
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0px 5px 22px var(--letter-shadow);
+  overflow: hidden;
+  transition: transform 1.4s cubic-bezier(0.22, 1, 0.36, 1) 0.4s, top 0.5s ease;
+  z-index: 2;
+}
+
+.open .real-letter {
+  transform: translate(-50%, -185px) scale(1.12);
+  top: 0;
+}
+
+.letter-content {
+  padding: 22px;
+  font-family: var(--font-body);
+  color: #444;
+  font-size: var(--text-sm);
+}
+
+.title {
+  font-family: var(--font-title);
+  font-size: var(--text-lg);
+  color: var(--pink-dark);
+  margin-bottom: 12px;
+  text-shadow: 0 2px 5px rgba(255, 100, 160, 0.3);
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(12px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.mask {
+  background-color: var(--color-pink-100);
+  height: 77px;
+  width: 100%;
+  z-index: 19;
+}
