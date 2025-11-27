@@ -17,16 +17,19 @@
 }
 
 .envelope-wrapper {
-  height: 380px;
+  height: 100%;
   width: 280px;
-  position: relative;
+   position: relative;
   cursor: pointer;
-  margin-top: 40px;
   transition: transform 0.2s ease;
 }
 
-.envelope-wrapper:hover {
-  transform: translateY(-4px);
+.container{
+   margin-top: 200px;
+   display: flex;
+   justify-content: center;
+   align-items: end;
+
 }
 
 #envelope {
@@ -36,7 +39,6 @@
   background: var(--envelope-body);
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  box-shadow: 0 6px 24px rgba(255, 140, 190, 0.35);
 }
 
 .front {
@@ -70,10 +72,10 @@
 .real-letter {
   position: absolute;
   width: 85%;
-  height: 130%;
+  height: 100%;
   left: 50%;
   top: -10px;
-  transform: translate(-50%, 20px) scale(0.75);
+  transform: translate(-50%, 0px) scale(0.75);
   background: white;
   border-radius: 14px;
   box-shadow: 0px 5px 22px var(--letter-shadow);
@@ -82,8 +84,9 @@
   z-index: 2;
 }
 
+/* When envelope is open, letter pops up – unchanged behaviour */
 .open .real-letter {
-  transform: translate(-50%, -185px) scale(1.12);
+  transform: translate(-50%, -265px) scale(1.12);
   top: 0;
 }
 
@@ -110,9 +113,178 @@
   0% { opacity: 0; transform: translateY(12px); }
   100% { opacity: 1; transform: translateY(0); }
 }
+
 .mask {
   background-color: var(--color-pink-100);
   height: 77px;
   width: 100%;
   z-index: 19;
+}
+
+/* ---------- NEW: tap hint animation (mobile friendly) ---------- */
+
+.tap-hint {
+  animation: tapHintBounce 1.5s ease-in-out infinite;
+}
+
+@keyframes tapHintBounce {
+  0%, 100% {
+    opacity: 0.6;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(3px);
+  }
+}
+
+/* ---------- NEW: doodles inside the letter (no text) ---------- */
+
+.doodle-content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 22px;
+  padding: 16px;
+}
+
+.doodle-icon {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.08));
+}
+
+/* ---------- NEW: modal for full letter text ---------- */
+
+.letter-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 999;
+  animation: fadeInModal 0.3s ease forwards;
+}
+
+.letter-modal-card {
+  width: 100%;
+  max-width: 360px;
+  background: #fff;
+  border-radius: 18px;
+  padding: 20px 18px 18px;
+  position: relative;
+  box-shadow: 0 10px 28px rgba(255, 140, 190, 0.4);
+  animation: scaleInModal 0.35s cubic-bezier(0.18, 0.89, 0.32, 1.28) forwards;
+  font-family: var(--font-body);
+}
+
+.letter-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.letter-modal-inner {
+  margin-top: 8px;
+  max-height: 60vh;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.modal-title {
+  text-align: center;
+}
+
+.modal-body-text {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.5;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.modal-primary-btn {
+  margin-top: 16px;
+  width: 100%;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 16px;
+  background: linear-gradient(135deg, #ff7ab8, #ff92c6);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(255, 140, 190, 0.45);
+}
+
+/* modal animations */
+@keyframes fadeInModal {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleInModal {
+  0% { transform: scale(0.85); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* ---------- Mobile-focused tweaks ---------- */
+
+@media (max-width: 480px) {
+  .envelope-wrapper {
+    margin-top: 140px;
+    transform: scale(0.9);
+  }
+
+  .letter-modal-card {
+    max-width: 340px;
+    padding: 18px 16px 16px;
+  }
+
+  .modal-body-text {
+    font-size: 13px;
+  }
+}
+.scribble-lines {
+   top: -20px;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  opacity: 0.6;
+}
+
+.scribble-line {
+  height: 6px;
+  background: linear-gradient(
+    90deg,
+    rgba(0,0,0,0.15) 0%,
+    rgba(0,0,0,0.1) 50%,
+    rgba(0,0,0,0.05) 100%
+  );
+  border-radius: 6px;
+}
+
+/* variations create natural scribble feel */
+.scribble-line.short {
+  width: 60%;
+}
+.scribble-line.medium {
+  width: 80%;
+}
+.scribble-line:not(.short):not(.medium) {
+  width: 100%;
 }
