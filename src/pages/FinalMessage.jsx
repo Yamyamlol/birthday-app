@@ -56,12 +56,11 @@ export default function FinalMessage() {
             You Did It 💌
           </h1>
           <p className="text-gray-700 mb-2">
-            I know I joke around a lot, act dramatic, and say stupid things, but
-            underneath all that nonsense, there is one very simple fact:
+            I know I joke around a lot, and am a little bit dramatic, and say stupid things, but
+            under all that nonsense, there is one very simple fact:
           </p>
           <p className="font-semibold text-pink-600 mb-2">
-            I love you. Ridiculously. Consistently. On good days, bad days,
-            sleepy days, and meltdown-over-small-things days.
+            You are someone I feel Comfortable with. You are fun, cute, and give the best hugs. I hope I made this day atleast a little memorable SO YOUR GOLDFISH MEMORY DOESN'T FORGET BAOUT THIS.
           </p>
           <p className="text-gray-700 mb-2">
             You are the person I want to spam with memes, rant about life to,
@@ -70,10 +69,11 @@ export default function FinalMessage() {
           </p>
           <p className="text-gray-700">
             So this is me, in the nerdiest way possible, saying:{" "}
-            <span className="font-semibold">thank you for being mine</span>.{" "}
-            Happy Birthday, and I hope this stupid little app made you smile
-            at least once.
+            <span className="font-semibold">HAPPY BIRTHDAY MANSHA, WITH ALL MY HEART</span>.{" "}
+            I hope this stupid little app made you smile
+            at least once. (I HOPE IT MADE YOU CRY TOO)
           </p>
+          <p className="text-gray-700 italic">If it did make you smile then you are free to hug me rn as tight as you can</p>
 
           {/* Secret gallery */}
    {/* Secret gallery */}

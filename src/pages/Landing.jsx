@@ -11,7 +11,7 @@ export default function Landing() {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    const id = setTimeout(() => setShowLoader(false), 1000);
+    const id = setTimeout(() => setShowLoader(false), 5000);
     return () => clearTimeout(id);
   }, []);
 

@@ -32,7 +32,7 @@ export const TREASURE_LOCATIONS = [
     radius: 50,
     image: location2,
     title: "Saanjli and Mansha's secret meetups",
-    text: "From bus stop parkour to this day, there’s only chaos—but I’m thankful we never looked back.",
+    text: "I still can’t believe we chose bus-stop parkour over simply confronting them. Like??? Not us thinking we were in some crazy movie instead of real life. But look at us now, upgraded to ‘two semi-functional adults’. Honestly? Growth🙇‍♀️",
   },
   {
     id: "convention-center",
@@ -42,7 +42,7 @@ export const TREASURE_LOCATIONS = [
     radius: 50,
     image: location3,
     title: "Saanjli and Mansha's first meet",
-    text: "Grateful for the “tum nayi ho, ajao aajao humare saath baithjao”.",
+    text: "grateful for the “tum nayi ho, aajao aajao humare saath baithjao” and most importantly the tapu",
   },
   {
     id: "last-year-birthday",
@@ -64,7 +64,7 @@ export const TREASURE_LOCATIONS = [
     radius: 50,
     image: location5,
     title: "Our go to spot",
-    text: "So many memories here, so many times we've been late because we were here. And also guess what? (IF YOU DON'T GET THIS ONE WE'RE GOING BACK HOME)",
+    text: "OH MY GOD, the amount of memories in this place??? Like where do I even START, this spot has seen more of our phases in the last year than i can process, time literally speed ran when we were here, Honestly WE should charging this place rent for the emotional damage And yk what this place reminds me of? darwani aunty ki shop ki chai😭",
   },
   {
     id: "mama-momos",
@@ -74,7 +74,7 @@ export const TREASURE_LOCATIONS = [
     radius: 50,
     image: location6,
     title: "Mama Momos",
-    text: "Saanjli said you have countless memories with this place.",
+    text: "We’d go to all your fav spots again if it meant putting a smile on your face. And this place?? Our literal first outing ever, (yes aur bhi log the) I still remember hum bus mein kaise baithke gaye the 😭",
   },
   {
     id: "bouffet-burgers",
@@ -94,7 +94,7 @@ export const TREASURE_LOCATIONS = [
     radius: 50,
     image: location8,
     title: "NIVH",
-    text: "Saanjli's NIVH.",
+    text: "NIVH was honestly the craziest experience ever, like lowkey insane, but in the best way. It literally made us fall in love with the whole clinical field!? Who would’ve thought. I loved roaming around the entire campus with you - the canteen, the park/walking area, THE library, the random dept buildings, and obviously the pool-wala area. nivh was like our second home damn we acted like we owned the place.",
   },
   {
     id: "dbakester-cafe",
@@ -104,7 +104,7 @@ export const TREASURE_LOCATIONS = [
     radius: 50,
     image: location9,
     title: "CAFE!N",
-    text: "These photos sum up our friendship perfectly, and I wouldn’t change a single moment. There’s no one else I’d rather share it with.",
+    text: "Baking with you is actually sweeeet (pun 100% intended). Bhai, only we know the struggle behind this entire day, battle scars and all Our whole friendship could literally be described by the two photos from this day. Isss photo ke baad toh we were out there ready to end people’s careers and livesss fr. My OG passenger princess, NO GPS We’ve stood by each other so many times, and every single time I’ve been grateful because idk who else I’d survive all this chaos with. These photos sum up our friendship perfectly, and I wouldn’t change a single moment. Thank you shasha for being the wonderful human being that you are, Happy Happy Birthday",
   },
   {
     id: "sanyam-secret",
